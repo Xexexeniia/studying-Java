@@ -1,0 +1,43 @@
+package enums;
+
+public enum Author {
+    Gogol,
+    Pushkin,
+    Oruell,
+    Doyle;
+}
+class Program{
+
+    public static void main(String[] args) {
+
+        Book b1 = new Book("Dead souls", Author.Gogol);
+        System.out.printf("Book \"Dead souls\" is written by author ", b1.name, b1.bookAuthor);
+
+        switch(b1.bookAuthor){
+            case Gogol:
+                System.out.println("gogol");
+                break;
+            case Oruell:
+                System.out.println("Oruell");
+                break;
+            case Pushkin:
+                System.out.println("Pushkin");
+                break;
+            case Doyle:
+                System.out.println("Doyle");
+                break;
+        }
+    }
+}
+class Book{
+
+    String name;
+    Author bookAuthor;
+
+
+    Book(String name, Author author){
+
+        bookAuthor = author;
+        this.name = name;
+    }
+}
