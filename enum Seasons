@@ -1,0 +1,29 @@
+package enums;
+
+public enum Seasons {
+    WINTER,
+    SUMMER,
+    SPRING,
+    FALL;
+}
+class Test {
+    public static void main(String[] args) {
+        Seasons x = Seasons.SUMMER;
+
+        switch (x)
+        {
+            case WINTER:
+                System.out.println("It's winter! Let's eat sweets and salads");
+                break;
+            case SUMMER:
+                System.out.println("It's summer! Vacations are coming!!!");
+                break;
+            case SPRING:
+                System.out.println("It's spring! Exams are coming!");
+                break;
+            case FALL:
+                System.out.println("It's fall! Autumn depression is coming!");
+                break;
+        }
+    }
+}
