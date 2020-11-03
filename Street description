@@ -1,0 +1,99 @@
+public interface DoblestyStreet {
+    public boolean Fly();
+    public boolean Switch();
+    public boolean Light();
+    public boolean SpoilWeather();
+    public String Move();
+    public String Go();
+    public String Growth();
+}
+
+abstract class Birds implements DoblestyStreet {
+    private static Object birds = false;
+    @Override
+    public boolean Fly() {
+        return false;
+    }
+    public static void main(String[] args) {
+        System.out.println("Are birds here?" + birds);
+    }
+}
+
+abstract class TrafficLights implements DoblestyStreet {
+    private static Object trafficLights = true;
+
+    @Override
+    public boolean Switch() {
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Are Traffic Lights here?" + trafficLights);
+    }
+}
+
+abstract class Sun implements DoblestyStreet {
+    private static Object sun = true;
+
+    @Override
+    public boolean Light() {
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Is Sun here?" + sun);
+    }
+}
+
+abstract class Rain implements DoblestyStreet {
+    private static Object rain = false;
+
+    @Override
+    public boolean SpoilWeather() {
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Is rain here?" + rain);
+    }
+}
+
+ abstract class Pedestrians implements DoblestyStreet {
+     private Object String;
+
+     @Override
+    public String Go() {
+        return (java.lang.String) String;
+    }
+     public static void main(String[] args) {
+         String [] man = new String [] {"Vasya", "Katya", "Manya", "Glasha"};
+         System.out.println("How much people are there?" + man.length);
+     }
+ }
+
+abstract class Cars implements DoblestyStreet {
+    private Object String;
+
+    @Override
+    public String Move() {
+        return (java.lang.String) String;
+    }
+    public static void main(String[] args) {
+        String [] car = new String [] {"Audi", "Bmw", "Volvo", "Toyota", "Lada", "Bicycle"};
+        System.out.println("How many cars are there?" + car.length);
+    }
+}
+
+
+abstract class Trees implements DoblestyStreet {
+    private Object String;
+
+    @Override
+    public String Growth() {
+        return (java.lang.String) String;
+    }
+    public static void main(String[] args) {
+        String [] tree = new String [] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" ,"15"};
+        System.out.println("How many trees are there?" + tree.length);
+    }
+}
