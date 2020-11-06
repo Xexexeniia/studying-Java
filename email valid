@@ -1,0 +1,6 @@
+
+public class email {
+    public static void main(String[] args) {
+        System.out.println("kpetrunina@gmail.com".matches("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b"));
+    }
+}
