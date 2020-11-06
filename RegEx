@@ -1,0 +1,13 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+    public class Repeat {
+
+        private static void main (String[] args) {
+            Pattern p = Pattern.compile ("(\\p{L})(?=.*\\1)");
+            Matcher m = p.matcher("\"cbcbcbc\"");
+            while (m.find()) {
+                System.out.println(m.group());
+            }
+        }
+    }
