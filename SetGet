@@ -1,0 +1,28 @@
+public class SetterGetter {
+    public static void main(String[] args) {
+        Person stud = new Person();
+        stud.setName("Kseniia");
+        stud.setAge(21);
+        System.out.println(stud.getName()+", " + stud.getAge());
+    }
+}
+class Person {
+    private String name;
+    private int age;
+
+    public void setName(String userName) {
+        name = userName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int userAge) {
+        age = userAge;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
