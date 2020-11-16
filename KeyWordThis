@@ -1,0 +1,37 @@
+public class ThisKeyWord {
+    public static void main(String[] args) {
+        Animal squirrel = new Animal();
+        squirrel.weight = 3;
+        squirrel.type = "wild";
+        squirrel.GetInfo();
+        Animal wolf = new Animal();
+        wolf.weight = 30;
+        wolf.type = "forest";
+        wolf.GetInfo();
+    }
+}
+
+class Animal {
+    String type;
+    int weight;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void GetInfo() {
+        System.out.println("animal's weight is " + weight + " type is " + type);
+    }
+}
