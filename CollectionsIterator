@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[33];
+        Collection collection = new ArrayList();
+        collection.add("1");
+        collection.add("2");
+        collection.add("3");
+        collection.remove("2");
+        Iterator iterator = collection.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
+//or
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[33];
+        Collection collection = new ArrayList();
+        collection.add("1");
+        collection.add("2");
+        collection.add("3");
+        collection.remove("2");
+        Iterator iterator = collection.iterator();
+        for (Object o: collection) {
+            System.out.println(o);
+        }
+    }
+}
