@@ -4,7 +4,6 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[33];
         Collection collection = new ArrayList();
         collection.add("1");
         collection.add("2");
@@ -23,7 +22,6 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[33];
         Collection collection = new ArrayList();
         collection.add("1");
         collection.add("2");
