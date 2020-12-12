@@ -12,3 +12,22 @@ public class ReadFile {
         } scanner.close();
     }
 }
+
+/or/
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ReadFile2 {
+    public static void main(String[] args) throws FileNotFoundException {
+        String path = "C:/test.txt"; //or to upload file to the root of the project and indicate the name of the file
+        File file = new File(path);
+        Scanner scanner = new Scanner(file);
+        String line = scanner.nextLine();
+        String[] numbers = line.split(" ");
+        System.out.println(Arrays.toString(numbers));
+
+        scanner.close();
+    }
+}
