@@ -9,6 +9,6 @@ public class ReadFile {
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             System.out.println(scanner.nextLine());
-        }
+        } scanner.close();
     }
 }
