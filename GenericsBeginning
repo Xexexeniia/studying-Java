@@ -1,0 +1,21 @@
+public class Generics {
+    public static void main(String[] args) {
+        List cities = new ArrayList();
+        cities.add("SPB");
+        cities.add("MSK");
+        cities.add("NY");
+
+        String city = (String) cities.get(0);
+
+        System.out.println(city);    //without generics
+
+
+        List <String> cities = new ArrayList<>();
+        cities.add("SPB");
+        cities.add("MSK");
+        cities.add("NY");
+        String city = cities.get(0);
+        System.out.println(city); //with generics
+
+    }
+}
