@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List <Users> UsersList = new ArrayList<>();
+        UsersList.add(new Users(1));
+        UsersList.add(new Users(2));
+        UsersList.add(new Users(3));
+
+        exit(UsersList);
+    }
+    private static void exit(List <Users> list) {
+        for(Users users: list) {
+            users.PrintMessage();
+
+        }
+
+    }
+
+}
+public class Users {
+    private int id;
+
+    public Users(int id) {
+        this.id = id;
+
+    }
+    public String toString() {
+        return String.valueOf(id);
+    }
+    public void PrintMessage(){
+        System.out.println("The user is printing a message...");
+    }
+
+
+}
