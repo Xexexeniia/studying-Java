@@ -1,0 +1,62 @@
+public class ClientInfo implements Serializable {
+        private int PassportNumber;
+        private String NameSurname;
+
+        public ClientInfo(String NameSurname, int PassportNumber) {
+            this.NameSurname = NameSurname;
+            this.PassportNumber = PassportNumber;
+        }
+        public int getPassportNumber() {
+            return PassportNumber;
+
+        }
+        public String getNameSurname() {
+            return NameSurname;
+        }
+        public String toString() {
+            return NameSurname + " - " + PassportNumber;
+        }
+    }
+    
+    //then write info to the file
+    
+    public class WriteInfo  {
+    public static void main(String[] args) {
+    ClientInfo clientInfo1 = new ClientInfo("IvanovIvan", 232223);
+    ClientInfo clientInfo2 = new ClientInfo("PetrovPetr", 6874894);
+        try {
+            FileOutputStream fos = new FileOutputStream("clients.bin");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(clientInfo1);
+            oos.writeObject(clientInfo2);
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+//then read info from the file
+
+public class ReadInfo {
+    public static void main(String[] args)  {
+        try {
+            FileInputStream fis = new FileInputStream("clients.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            ClientInfo clientInfo1 = (ClientInfo) ois.readObject();
+            ClientInfo clientInfo2 = (ClientInfo) ois.readObject();
+
+            System.out.println(clientInfo1);
+            System.out.println(clientInfo2);
+
+            ois.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
